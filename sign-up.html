@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign-up Form</title>
+    <link rel="stylesheet" href="signstyles.css">
+    <script src="sign-up.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="dark-bg"><img src="odin-lined.png" class="logo" alt="Logo">
+                <span>ODIN</span>
+            </div>
+            <div class="footer">
+                Photo by <span class="source">Halie West</span> on <span class="source">Unsplash</span>
+            </div>
+        </div>
+
+        <div class="content">
+            <section class="header">
+                <p>
+                    This is not a real online service! You know you need something like this
+                    in your life to help you realize your deepest dreams. 
+
+                    Sign up <span class="highlight">now</span> to get started. 
+                    <br><br>
+                    You <span class="highlight">know</span> you want to.
+                </p>
+            
+            </section>
+
+            <form class="signup">
+                <h2>Let's do this!</h2>
+                <section class="information">
+                    <div>
+                        <label for="firstname">FIRST NAME</label>
+                        <input type="text" id="firstname" name="firstname">
+                    </div>
+                    <div>
+                        <label for="lastname">LAST NAME</label>
+                        <input type="text" id="lastname" name="lastname">
+                    </div>
+                    <div>
+                        <label for="address">EMAIL</label>
+                        <input type="email" id="address" name="address" required>
+                    </div>
+                    <div>
+                        <label for="phone">PHONE NUMBER</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div>
+                        <label for="password">PASSWORD</label>
+                        <input type="password" id="password" name="password" class="error" onkeyup="checkPassword()" required>
+                        <span class="message"></span>
+                    </div>
+                    <div>
+                        <label for="confirm">CONFIRM PASSWORD</label>
+                        <input type="password" id="confirm" name="confirm" class="error" required>
+                    </div>
+                </section>
+            </form>
+            
+            <div id ="create">
+                <button type="submit" form="signup">Create Account</button>
+                <div>Already have an account? Log in.</div>
+            </div>
+
+        
+        </div>
+
+            <div id="errorMessage">*Passwords do not match</div>
+
+    </div>
+    
+</body>
+</html>
