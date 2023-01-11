@@ -1,13 +1,16 @@
 
 function checkPassword() {
-    let passwordInput = document.getElementById("password").value;
-    let confirmPass = document.getElementById("confirm").value;
+    let passwordInput = document.getElementById("password");
+    let confirmPass = document.getElementById("confirm");
 
-    if(passwordInput != confirmPass) {
-        document.querySelector(".signup>.information>div>.message").innerHTML = "*Passwords do not match";
-        return false;
+    if(passwordInput.value === confirmPass.value) {
+        passwordInput.setCustomValidity("");
+        confirmPass.setCustomValidity("");
+        document.querySelector(".message").textContent = "";
     } else {
-        document.querySelector(".signup>.information>div>.message").innerHTML = "";
-        return true;
+        passwordInput.setCustomValidity("Passwords do not match");
+        confirmPass.setCustomValidity("Passwords do not match");
+        document.querySelector(".message").textContent = "* Passwords do not match";
     }
+    
 };

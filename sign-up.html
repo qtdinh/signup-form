@@ -51,12 +51,12 @@
                     </div>
                     <div>
                         <label for="password">PASSWORD</label>
-                        <input type="password" id="password" name="password" class="error" onkeyup="checkPassword()" required>
+                        <input type="password" id="password" name="password" class="error" oninput="checkPassword()" required>
                         <span class="message"></span>
                     </div>
                     <div>
                         <label for="confirm">CONFIRM PASSWORD</label>
-                        <input type="password" id="confirm" name="confirm" class="error" required>
+                        <input type="password" id="confirm" name="confirm" class="error" oninput="checkPassword()" required>
                     </div>
                 </section>
             </form>
@@ -68,9 +68,6 @@
 
         
         </div>
-
-            <div id="errorMessage">*Passwords do not match</div>
-
     </div>
     
 </body>
